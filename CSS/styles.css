@@ -1,0 +1,303 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: fixed; /* Makes the header fixed */ top: 0; /* Aligns it to the top of the page */ width: 100%; /* Ensures it spans the full width of the page */ z-index: 1000;
+}
+
+.header img.logo_1 {
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding-right: 28px;
+}
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  flex-grow: 1; /* Allows the search bar to grow and take up available space */
+}
+
+.search-bar {
+  height: 40px;
+  padding: 0 40px 0 10px; /* Adjust padding to create space for the search icon */
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  flex-grow: 1; /* Allows the search bar to grow and take up available space */
+  transition: box-shadow 0.3s, width 0.3s; /* Added width transition for smooth resizing */
+  width: 300px; /* Default width */
+}
+
+/* Media query for smaller screen sizes */
+@media (max-width: 768px) {
+  .search-bar {
+      width: 200px; /* Adjust this value based on the desired width for smaller screens */
+  }
+}
+
+
+.search-bar:focus {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.search-btn {
+  position: absolute;
+  right: 10px; /* Adjust this value as needed for positioning */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0; /* Remove padding */
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+.nav a:hover {
+  color: white;
+  background-color: blue;
+  cursor: pointer;
+  padding: 10px 20px; /* Match the padding of the button */
+  border-radius: 5px; /* Match the border radius of the button */
+  transition: background-color 0.3s, color 0.3s, padding 0.3s; /* Ensure smooth transition */
+}
+
+
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  margin: 0 15px;
+  padding: 10px;
+  transition: color 0.3s, background-color 0.3s, cursor 0.3s;
+}
+
+
+
+.button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.button:hover {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+
+.more {
+  position: relative;
+}
+
+.more-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.more-menu a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.more-menu a:hover {
+  background-color: blue;
+  color: white;
+}
+
+.more:hover .more-menu {
+  display: block;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.footer-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px 0;
+  padding-right: 20px; /* Added padding for spacing */
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  margin-bottom: 15px; /* Added margin for spacing */
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column li {
+  padding: 5px 0;
+  transition: text-decoration 0.3s;
+}
+
+.footer-column li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+}
+
+main {
+  padding: 60px 20px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white; /* White background for content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better appearance */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.content .text {
+  flex: 1;
+  padding: 20px;
+}
+
+.content .image {
+  flex: 1;
+  padding: 20px;
+}
+
+.content .image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.key-features li,
+.benefits li {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Replace the colors in your existing CSS for these classes */
+
+.pink {
+  background-color: #ADD8E6; /* Light Blue */
+}
+
+.yellow {
+  background-color: #90EE90; /* Light Green */
+}
+
+.red {
+  background-color: #F08080; /* Light Coral */
+  color: white; /* Ensure text is readable */
+}
+
+.orange {
+  background-color: #f4f45d; /* Light Goldenrod Yellow */
+}
+
+
+.key-features li:hover,
+.benefits li:hover {
+  background-color: #084a82;
+  color: white; /* Ensure text is readable on hover */
+}
+
+.contact-info p {
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+}
+
+/* Media query for smaller screen sizes */
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .content .text,
+  .content .image {
+      padding: 10px;
+  }
+
+  .key-features li,
+  .benefits li {
+      font-size: 16px;
+  }
+}
